@@ -1,0 +1,85 @@
+import React, { useState, useEffect} from 'react';
+import axios from 'axios';
+import { withStyles } from '@material-ui/core/styles';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableContainer from '@material-ui/core/TableContainer';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import Paper from '@material-ui/core/Paper';
+ 
+const StyledTableCell = withStyles((theme) => ({
+    head: {
+        backgroundColor: theme.palette.common.black,
+        color: theme.palette.common.white,
+    },
+    body: {
+        fontSize: 14,
+    },
+}))(TableCell);
+const StyledTableRow = withStyles((theme) => ({
+    root: {
+        '&:nth-of-type(odd)': {
+            backgroundColor: theme.palette.action.hover,
+        },
+    },
+}))(TableRow);
+
+ 
+export default function Fashion() {
+
+    let temp=[];
+    const URL = 'https://demo0468203.mockable.io/body';
+
+ 
+
+
+        const [groups, setGroup] = React.useState([]);
+        const [groupKey,setGroupKey] = React.useState([]);
+    
+        const options = {
+            'headers': {
+                'Content-Type': 'application/json',
+            }
+        }
+    
+    useEffect(() => {
+            axios.get(URL, options)
+                .then( (groups) => {
+                    console.log(groups.data);
+                    setGroup(groups.data['Men'][0]['TopWear'][0]['Polo']);
+                    console.log(groups.data['Men'][0]['TopWear'][0]['Polo']);
+                    setGroupKey(groups.data['Men'][0]['TopWear'][0]['Polo']);
+                })
+                .catch( (error) => {
+                    console.log(error);
+                })
+        }, [])
+   
+    return (
+        <>
+         <TableContainer component={Paper}>
+            <Table aria-label="customized table">
+                <TableHead>
+                    <TableRow>
+                        <StyledTableCell>Size</StyledTableCell>
+                        <StyledTableCell align="center">Color</StyledTableCell>
+                        <StyledTableCell align="center">Price</StyledTableCell>
+                    </TableRow>
+                </TableHead>
+                <TableBody>
+                    {groupKey.map( (row, index) => (
+                    <TableRow key={index} selected="false">
+                    {console.log("this"+row)}
+                    <TableCell>{row.size}</TableCell>
+                    <TableCell>{row.price}</TableCell>
+                    <TableCell>{row.color}</TableCell>
+                    </TableRow>))}
+                </TableBody>
+            </Table>
+        </TableContainer>
+        </>
+    );
+}
+

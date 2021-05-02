@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+<form method="post" enctype="multipart/form-data" asp-controller="Img" asp-action="Index">
+    <input type="file" name="ifile"/>
+
+    <input type="submit" value="Upload.."/>
+
+    <hr />
+    <h4>
+        @ViewData["Message"]
+    <h3>Swagger api is running</h3>
+    </h4>
+</form>

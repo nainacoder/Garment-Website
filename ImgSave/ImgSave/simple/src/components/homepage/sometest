@@ -1,0 +1,42 @@
+{
+    "Men":
+        {
+            "TopWear":
+                {
+                    "Polo":[
+                        {
+                            "size":"xs",
+                            "price":450,
+                            "color":"green"
+                        },
+                        {
+                            "size":"s",
+                            "price":450,
+                            "color":"green"
+                        },
+                        {
+                            "size":"m",
+                            "price":450,
+                            "color":"green"
+                        },
+                        {
+                            "size":"l",
+                            "price":450,
+                            "color":"green"
+                        },
+                        {
+                        "size":"xl",
+                        "price":450,
+                        "color":"green"
+                        }
+
+ 
+
+
+                    ]
+                }
+                
+        }
+        
+}
+ 

@@ -1,0 +1,34 @@
+/* .modal1,.modalstyle1{
+    background-color: transparent;
+    height: 800px;
+    width:400px;
+} */
+
+.modal1{
+    height:700px;
+    width:400px;
+}
+
+.images1{
+    height: 400px;
+    width:400px;
+}
+
+.home_row{
+    
+    display: flex;
+    z-index: 1;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.details{
+
+    display: flex;
+    float: left;
+    z-index: 1;
+    margin-left: 5px;
+    margin-right: 5px;
+
+}
+

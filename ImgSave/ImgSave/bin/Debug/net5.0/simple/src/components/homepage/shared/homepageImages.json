@@ -1,0 +1,22 @@
+{
+    "home" : [
+    {
+        "ID": "001", 
+        "Name": "Women", 
+        "Image": "https://wallup.net/wp-content/uploads/2016/02/20/34831-monochrome-women-black_dress-tight_clothing"
+    },
+  
+    {
+        "ID": "002", 
+        "Name": "Men", 
+        "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDZjdbztBcSYhGqOyrE38Eee_4ER9bCiRM1g&usqp=CAU"
+    },
+  
+    {
+        "ID": "003", 
+        "Name": "Kids", 
+        "Image": "https://images.pexels.com/photos/1619801/pexels-photo-1619801.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    }
+]
+}
+
